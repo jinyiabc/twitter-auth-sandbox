@@ -4,7 +4,7 @@ const User = require('../models/users');
 const twitterAuth = {
 		consumerKey: process.env.consumerKey,
 		consumerSecret: process.env.consumerSecret,
-		callbackURL: process.env.APP_URL+'auth/github/callback'
+		callbackURL: process.env.APP_URL+'auth/twitter/callback'
 	};
 
 console.log(process.env.consumerKey);
