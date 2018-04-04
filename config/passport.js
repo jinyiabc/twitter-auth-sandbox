@@ -56,7 +56,7 @@ passport.use(new TwitterStrategy(twitterAuth,
 
 passport.serializeUser(function (user, done) {
 	console.log(user);
-	done(null, user.twitterId);
+	done(null, user);
 });
 
 passport.deserializeUser(function (id, done) {
