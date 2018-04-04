@@ -26,6 +26,9 @@ passport.use(new TwitterStrategy(twitterAuth,
 					var newUser = new User();
 
 					newUser.twitterId = profile.id;
+					newUser.username = profile.username;
+					newUser.displayName = profile.displayName;
+					newUser.imageUrl = profile.photos[0].value;
 
 					newUser.save(function (err) {
 						if (err) {
